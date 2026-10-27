@@ -1,2 +1,2 @@
-import Admin from './panel';
-export default function Page(){return <Admin/>;}
+import {redirect} from 'next/navigation';
+export default function Page(){redirect('/');}
