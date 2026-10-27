@@ -1,0 +1,6 @@
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+export const configurations=sqliteTable('configurations',{id:integer('id').primaryKey(),version:text('version').notNull(),payload:text('payload').notNull(),updated:text('updated').notNull(),actor:text('actor').notNull()});
+export const configHistory=sqliteTable('config_history',{id:text('id').primaryKey(),version:text('version').notNull(),payload:text('payload').notNull(),created:text('created').notNull(),actor:text('actor').notNull()});
+export const members=sqliteTable('members',{email:text('email').primaryKey(),userId:text('user_id'),role:text('role').notNull(),name:text('name').notNull(),created:text('created').notNull()});
+export const records=sqliteTable('records',{id:text('id').primaryKey(),owner:text('owner').notNull(),kind:text('kind').notNull(),mode:text('mode').notNull(),cn:text('cn').notNull(),created:text('created').notNull(),updated:text('updated').notNull(),payload:text('payload').notNull(),region:text('region').notNull(),deleted:integer('deleted').notNull().default(0)});
+export const audit=sqliteTable('audit',{id:text('id').primaryKey(),actor:text('actor').notNull(),action:text('action').notNull(),target:text('target').notNull(),created:text('created').notNull(),detail:text('detail').notNull()});
