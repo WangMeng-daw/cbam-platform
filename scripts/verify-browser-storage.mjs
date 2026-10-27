@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createRecordStore} from '../browser/storage.mjs';
+const data=new Map(),storage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v)};
+const store=createRecordStore(()=>storage),config={version:'v1',factor:2},input={cn:'76042100',mode:'professional',amount:10},result={actual:{see:1.6981}};
+const id=store.save(input,result,config);input.amount=999;config.factor=99;
+assert.equal(store.list().length,1);assert.equal(store.get(id).record.input.amount,10);assert.equal(store.get(id).record.configSnapshot.factor,2);
+assert.equal(createRecordStore(()=>storage).get(id).record.result.actual.see,1.6981);
+store.archive(id,true);assert.equal(store.list().length,0);assert.equal(store.list(true).length,1);assert.throws(()=>store.get(id));
+store.archive(id,false);assert.equal(store.list().length,1);
+assert.equal(createRecordStore(()=>({getItem:()=>null})).list().length,0);
+const before=[...data.values()][0];const full=createRecordStore(()=>({getItem:storage.getItem,setItem(){throw Error('quota')}}));assert.throws(()=>full.save(input,null,config),/保存失败/);assert.equal([...data.values()][0],before);
+assert.throws(()=>createRecordStore(()=>({getItem:()=>'{broken'})).list(),/损坏/);
+console.log('PASS: persistence, snapshot immutability, archive/restore, browser isolation, quota failure and corrupt data.');

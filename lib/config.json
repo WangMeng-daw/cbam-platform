@@ -17920,14 +17920,6 @@
       "zh": "瑞士（豁免）",
       "en": "Switzerland (exempt)"
     },
-    "请在最后一步同意保存与处理核算数据": {
-      "zh": "请在最后一步同意保存与处理核算数据",
-      "en": "Consent on the final step is required to store data"
-    },
-    "草稿已加密保存": {
-      "zh": "草稿已加密保存",
-      "en": "Draft saved securely"
-    },
     "报告已生成": {
       "zh": "报告已生成",
       "en": "Report generated"
@@ -18104,10 +18096,6 @@
       "zh": "添加前体物料 / 来源装置",
       "en": "Add precursor / source installation"
     },
-    "登记证据文件名、台账编号或内部链接；报告保留索引，原件请在企业文档系统保存。": {
-      "zh": "登记证据文件名、台账编号或内部链接；报告保留索引，原件请在企业文档系统保存。",
-      "en": "Record evidence filenames, ledger IDs or internal links; retain originals in your document system."
-    },
     "核算前确认": {
       "zh": "核算前确认",
       "en": "Ready for calculation"
@@ -18148,17 +18136,9 @@
       "zh": "留空自动匹配官方基准",
       "en": "Blank uses official benchmark"
     },
-    "同意加密保存输入、结果及IP大致属地，用于核算追溯。": {
-      "zh": "同意加密保存输入、结果及IP大致属地，用于核算追溯。",
-      "en": "Consent to encrypted storage of inputs, results and coarse IP region for traceability."
-    },
     "数据说明": {
       "zh": "数据说明",
       "en": "Data notice"
-    },
-    "不勾选仍可计算和导出，但不保存记录。": {
-      "zh": "不勾选仍可计算和导出，但不保存记录。",
-      "en": "You may calculate and export without saving records."
     },
     "碳核算平台": {
       "zh": "碳核算平台",
@@ -18203,14 +18183,6 @@
     "产品与贸易信息": {
       "zh": "产品与贸易信息",
       "en": "Product & trade"
-    },
-    "同意保存核算记录": {
-      "zh": "同意保存核算记录",
-      "en": "Consent to saving this calculation"
-    },
-    "保存草稿": {
-      "zh": "保存草稿",
-      "en": "Save draft"
     },
     "上一步": {
       "zh": "上一步",
@@ -18348,33 +18320,13 @@
       "zh": "咨询内容",
       "en": "Your enquiry"
     },
-    "隐私说明": {
-      "zh": "隐私说明",
-      "en": "Privacy notice"
-    },
     "提交咨询需求": {
       "zh": "提交咨询需求",
       "en": "Submit enquiry"
     },
-    "管理后台": {
-      "zh": "管理后台",
-      "en": "Administration"
-    },
     "法规依据": {
       "zh": "法规依据",
       "en": "Regulatory basis"
-    },
-    "我的核算与草稿": {
-      "zh": "我的核算与草稿",
-      "en": "My calculations & drafts"
-    },
-    "暂无保存记录": {
-      "zh": "暂无保存记录",
-      "en": "No saved records"
-    },
-    "草稿": {
-      "zh": "草稿",
-      "en": "Draft"
     },
     "核算记录": {
       "zh": "核算记录",
@@ -18387,14 +18339,6 @@
     "归档": {
       "zh": "归档",
       "en": "Archive"
-    },
-    "数据与隐私说明": {
-      "zh": "数据与隐私说明",
-      "en": "Data & privacy notice"
-    },
-    "核算无需提供个人身份信息。勾选保存后，输入、结果、参数版本与IP国家/地区将加密保存，用于核算复核与追溯；不存储完整IP。未同意保存时，仅即时计算与导出。": {
-      "zh": "核算无需提供个人身份信息。勾选保存后，输入、结果、参数版本与IP国家/地区将加密保存，用于核算复核与追溯；不存储完整IP。未同意保存时，仅即时计算与导出。",
-      "en": "Identity data is not required for calculations. With consent, inputs, results, configuration versions and coarse IP region are stored encrypted for review; full IP addresses are not stored. Without consent, data is used only for calculation and export."
     },
     "燃料源流": {
       "zh": "燃料源流",
@@ -18588,21 +18532,9 @@
       "zh": "暂无核算结果",
       "en": "No calculation results"
     },
-    "联系我们": {
-      "zh": "联系我们",
-      "en": "Contact"
-    },
     "欧盟碳价": {
       "zh": "欧盟碳价",
       "en": "EU carbon prices"
-    },
-    "留言已提交": {
-      "zh": "留言已提交",
-      "en": "Enquiry submitted"
-    },
-    "咨询留言": {
-      "zh": "咨询留言",
-      "en": "Enquiry"
     }
   }
 }
