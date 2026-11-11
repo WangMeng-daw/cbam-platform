@@ -13,7 +13,7 @@ try{
  assert.deepEqual([a.combustion,a.anode,a.cf4,a.c2f6,a.pfc,a.direct,a.see],[32903.3,252540,4.32,.52,35116,320559,1.603]);
  assert.deepEqual([b.direct,b.sources[0].allocation,b.precursor,b.se,b.see],[5283,.6,192335.4,.047,1.749]);
  assert.equal(a.cost,1299658.56);assert.equal(a.costWan,129.97);assert.equal(b.cost,14395757.04);assert.equal(b.costWan,1439.58);
- assert.equal(a.sefa,1.423*.975);assert.equal(b.sefa,.06*.975);assert.notEqual(b.cost,b.certificates*b.price);
+ assert.equal(a.sefa,1.387425);assert.equal(b.sefa,.0585);assert.notEqual(b.cost,b.certificates*b.price);
  assert.equal(r.totalCost,15695415.6);assert.equal(memory.size,0);
  const invalid=(mutator,pattern)=>{const v=structuredClone(input);mutator(v);assert.throws(()=>calculate(v,config),pattern);};
  invalid(v=>v.products[1].precursors[0].quantity=120001,/超过/);
