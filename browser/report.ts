@@ -3,6 +3,7 @@ import {xlsx,pdf,flatten} from './files.mjs';
 import {reportGroups} from '../lib/fields';
 export function exportReport(d:any,c:any,stored:any=null):Blob{
  const r:any=stored?.result||calculate(d.input,c),i=r.input||d.input,eng=d.lang==='en',t=c.templates.find((x:any)=>x.id===(d.template||c.activeTemplate))||c.templates[0];const label=(zh:string,en:string)=>eng?en:zh;
+ if(r.products)return exportDocumentReport(r,c,d.format,eng);
  const disclaimer=eng?(t.disclaimerEn||'For reference only. Final determination rests with the EU authorities; independent verification is required before submission.'):t.disclaimer;
  const simple=r.mode==='simple';
  const formatted=(v:any,n:number)=>v===null||v===undefined?'':Number(Number(v).toFixed(n));
@@ -26,3 +27,26 @@ export function exportReport(d:any,c:any,stored:any=null):Blob{
  return response(pdf(lines,'CBAM '+i.cn),'pdf');
 }
 function response(bytes:any,ext:string){return new Blob([bytes],{type:ext==='pdf'?'application/pdf':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});}
+
+function exportDocumentReport(r:any,c:any,format:string,eng:boolean):Blob{
+ const L=(zh:string,en:string)=>eng?en:zh;
+ const basis=L('项目文档口径：实际值计算示例（平台开发用）。仅扣本工序免费分配；成本按未取整排放负担计算。此口径不等同于欧盟正式清缴口径。','Project document method: process-only allocation; costs use unrounded liability. This method differs from official EU settlement methodology.');
+ const headers=[L('产品','Product'),'CN',L('产量 t','Production t'),L('输欧量 t','Exports t'),L('直接排放 t','Direct t'),'SE tCO2e/t','SEE tCO2e/t',L('本工序基准','Process benchmark'),'SEFA',L('未取整排放负担 t','Unrounded liability t'),L('整张证书参考数','Whole-certificate estimate'),L('碳价 EUR','Price EUR'),L('成本 EUR','Cost EUR'),L('成本 万欧元','Cost EUR x 10000')];
+ const summary=r.products.map((p:any)=>[p.name,p.cn,p.production,p.exportQty,p.direct,p.se,p.see,p.benchmark,p.sefa,p.netEmissions,p.certificates,p.price??'',p.cost??'',p.costWan??'']);
+ const notes=[basis,L('燃料排放保留1位小数；CF4、C2F6先保留2位，PFC当量与工序总排放取整；SEE保留3位后用于成本计算。','Fuel: 1 decimal; CF4/C2F6: 2 decimals before CO2e; PFC CO2e and process emissions: integers; SEE: 3 decimals before cost calculation.'),r.input.report?.dataGaps||'',...r.warnings];
+ const meta=[['Method',r.method],['Engine',r.version],['Configuration',r.configVersion],['Year',r.input.year],['Quarter',r.input.quarter],['Price source',r.priceSource],['Scenario',r.priceEstimate?'Yes':'No'],['Enterprise',r.input.report?.operatorName||''],['Generated',new Date().toISOString()]];
+ if(format==='xlsx')return response(xlsx([
+ {name:L('各产品核算','Products'),rows:[headers,...summary]},
+ {name:L('排放分项','Emissions'),rows:[['Product','Fuel t','Anode t','CF4 t','C2F6 t','PFC CO2e t','Direct t','Allocated upstream t','Embedded production t'],...r.products.map((p:any)=>[p.name,p.combustion,p.anode,p.cf4,p.c2f6,p.pfc,p.direct,p.precursor,p.embeddedProduction])]},
+ {name:L('工序关联与分摊','Allocation'),rows:[['Product','Upstream','Input t','Allocation share','Allocated emissions t'],...r.products.flatMap((p:any)=>p.sources.map((s:any)=>[p.name,s.name,s.quantity,s.allocation,s.emissions]))]},
+ {name:L('计算过程','Trace'),rows:[['Item','Formula','Value','Source'],...r.trace.map((t:any)=>[t.name,t.formula,t.value??'',t.source])]},
+ {name:L('全量输入','Input'),rows:[['Field','Value'],...flatten(r.input)]},
+ {name:L('核算说明','Notes'),rows:[['Notes'],...notes.map(t=>[t])]},
+ {name:'Metadata',rows:[['Field','Value'],...meta,['Total cost EUR',r.totalCost??''],['Total export emissions t',r.totalExportEmissions]]}
+ ]),'xlsx');
+ if(format!=='pdf')throw Error('不支持的导出格式');
+ const lines:any[]=[{heading:true,text:L('产品实际值核算报告（文档口径）','Actual-value report (document method)')},basis,...meta.map(row=>row.join(': '))];
+ for(const [index,p] of r.products.entries()){lines.push({heading:true,text:p.name+' · '+p.cn});for(let k=2;k<headers.length;k++)lines.push(headers[k]+': '+summary[index][k]);lines.push(L('燃料 / 阳极 / PFC 排放 t','Fuel / Anode / PFC emissions t')+`: ${p.combustion} / ${p.anode} / ${p.pfc}`,`CF4: ${p.cf4} t; C2F6: ${p.c2f6} t`);for(const s of p.sources)lines.push(L('上游分摊','Upstream allocation')+`: ${s.name}; ${s.quantity} t; ${(s.allocation*100).toFixed(2)}%; ${s.emissions} tCO2e`);}
+ lines.push({heading:true,text:L('合计','Totals')},`EUR: ${r.totalCost??'—'}; tCO2e: ${r.totalExportEmissions}`,{heading:true,text:L('计算明细','Calculation trace')});for(const t of r.trace)lines.push(t.name,t.formula+' = '+(t.value??'—'));
+ lines.push({heading:true,text:L('核算说明','Notes')},...notes);return response(pdf(lines,'CBAM actual document method'),'pdf');
+}
