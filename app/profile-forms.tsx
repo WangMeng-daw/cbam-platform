@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import {Save,Plus} from 'lucide-react';
 import {Field} from './controls';
 import countries from '../lib/country-codes.json';
@@ -8,17 +8,22 @@ import {INSTALLATION_FIELDS,PRODUCT_CATEGORIES,PRODUCTION_ROUTES,emptyCompany,ed
 import {productOptions} from '../lib/products.mjs';
 
 export function CompanyProfiles({records,onSave,onApply,lang=0}:any){
- const [company,setCompany]=useState<any>(emptyCompany);
+ const [company,setCompany]=useState<any>(emptyCompany),[focusRequest,setFocusRequest]=useState(0),[feedback,setFeedback]=useState('');
+ const form=useRef<HTMLElement>(null);
+ useEffect(()=>{if(!focusRequest)return;form.current?.scrollIntoView({block:'start',behavior:'auto'});form.current?.querySelector<HTMLInputElement>('input')?.focus({preventScroll:true});},[focusRequest]);
  const T=(zh:string,en:string)=>lang?en:zh;
- const change=(key:string,value:string)=>setCompany({...company,[key]:value,...(key==='countryCode'?{country:countries.records.find(r=>r.code===value)?.name||company.country}:{})});
- return <section className="ws-card"><h3>{T('企业设施资料','Installation profile')}</h3><p className="muted">{T('设施名称和城市为必填项，其他信息均为选填。','Installation name and city are required; all other fields are optional.')}</p>
+ const edit=(row:any)=>{setCompany(editCompany(row));setFeedback('');setFocusRequest(n=>n+1);};
+ const clear=()=>{setCompany(emptyCompany());setFeedback('');setFocusRequest(n=>n+1);};
+ const save=()=>{const updating=!!company.id,saved=onSave(company);if(saved){setCompany(saved);setFeedback(T(updating?'企业资料修改已保存':'企业资料已保存',updating?'Changes saved':'Enterprise saved'));}};
+ const change=(key:string,value:string)=>{setFeedback('');setCompany({...company,[key]:value,...(key==='countryCode'?{country:countries.records.find(r=>r.code===value)?.name||company.country}:{})});};
+ return <section ref={form} className="ws-card company-profile-form"><h3>{T(company.id?'编辑企业设施资料':'企业设施资料',company.id?'Edit installation profile':'Installation profile')}</h3>{company.id&&<div className="company-edit-notice" role="status"><span>{T('正在编辑：','Editing: ')}<strong>{company.name}</strong> · {T('修改后点击“保存修改”','Click Save changes when finished')}</span><button type="button" className="text-button" onClick={clear}>{T('取消编辑','Cancel edit')}</button></div>}<p className="muted">{T('设施名称和城市为必填项，其他信息均为选填。','Installation name and city are required; all other fields are optional.')}</p>
   <div className="form-grid">{INSTALLATION_FIELDS.map(([key,zh,en])=><Field key={key} label={T(zh,en)} required={key==='name'||key==='city'} value={company[key]} onChange={(v:string)=>change(key,v)}
    type={key==='latitude'||key==='longitude'?'number':key==='email'?'email':key==='telephone'?'tel':'text'} min={key==='latitude'?-90:key==='longitude'?-180:undefined} max={key==='latitude'?90:key==='longitude'?180:undefined}
    searchable={key==='countryCode'} searchKind="country" lang={lang}
    options={key==='countryCode'?countryOptions(countries.records,lang):undefined}
    hint={key==='countryCode'?T('按附表1保留266项；可搜索CN、China或中国。','266 entries from Annex 1; search by code or country name, e.g. CN or China.'):''}/>)}</div>
-  <div className="ws-actions"><button className="button primary" onClick={()=>{const saved=onSave(company);if(saved)setCompany(saved);}}><Save size={16}/>{T('保存企业','Save enterprise')}</button><button className="button secondary" onClick={()=>setCompany(emptyCompany())}><Plus size={16}/>{T('新增','New')}</button></div>
-  <div className="ws-table"><table><thead><tr>{[T('设施名称','Installation'),T('城市','City'),T('国家代码','Country code'),T('操作','Actions')].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{records.length?records.map((r:any)=><tr key={r.id}><td>{editCompany(r).name}</td><td>{r.city||'—'}</td><td>{r.countryCode||'—'}</td><td><div className="ws-table-actions"><button onClick={()=>setCompany(editCompany(r))}>{T('编辑','Edit')}</button><button onClick={()=>onApply(editCompany(r))}>{T('用于核算','Use')}</button></div></td></tr>):<tr><td colSpan={4} className="ws-empty">{T('暂无设施资料','No installations saved')}</td></tr>}</tbody></table></div>
+  <div className="ws-actions"><button type="button" className="button primary" onClick={save}><Save size={16}/>{T(company.id?'保存修改':'保存企业',company.id?'Save changes':'Save enterprise')}</button><button type="button" className="button secondary" onClick={clear}><Plus size={16}/>{T('新增','New')}</button>{feedback&&<span className="company-save-feedback" role="status">{feedback}</span>}</div>
+  <div className="ws-table"><table><thead><tr>{[T('设施名称','Installation'),T('城市','City'),T('国家代码','Country code'),T('操作','Actions')].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{records.length?records.map((r:any)=><tr key={r.id} className={company.id===r.id?'company-editing-row':''}><td>{editCompany(r).name}</td><td>{r.city||'—'}</td><td>{r.countryCode||'—'}</td><td><div className="ws-table-actions"><button onClick={()=>edit(r)}>{T('编辑','Edit')}</button><button onClick={()=>onApply(editCompany(r))}>{T('用于核算','Use')}</button></div></td></tr>):<tr><td colSpan={4} className="ws-empty">{T('暂无设施资料','No installations saved')}</td></tr>}</tbody></table></div>
  </section>;
 }
 
