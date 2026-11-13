@@ -1,0 +1,1371 @@
+{
+  "version": "V3-defaults-V5-benchmarks-2026-11-13",
+  "sources": [
+    {
+      "file": "默认值（铝产品）V3.xlsx",
+      "sha256": "1b27eb1baf43c3be13d8a588f0ac750660ba6f425f6cd12928d00ac92fb488f3",
+      "sheet": "中国区域铝产品默认值"
+    },
+    {
+      "file": "基准值（铝产品V5）.xlsx",
+      "sha256": "3ce73d6c9378ed67b0dec44ed5d121d54694d4fe125c1244f746084abe90445c",
+      "sheet": "免费配额调整规则附件（铝产品）Annex+to+IA+Free"
+    }
+  ],
+  "records": [
+    {
+      "cn": "76011010",
+      "name": "未锻轧非合金铝锭坯",
+      "en": "Aluminium slabs, not alloyed, unwrought",
+      "values": [
+        3.3,
+        3.6,
+        3.9
+      ],
+      "sourceRow": 4,
+      "sourceDirect": 3
+    },
+    {
+      "cn": "76011090",
+      "name": "未锻轧非合金铝（锭坯除外）",
+      "en": "Aluminium, not alloyed, unwrought (excl. slabs)",
+      "values": [
+        3.3,
+        3.6,
+        3.9
+      ],
+      "sourceRow": 5,
+      "sourceDirect": 3
+    },
+    {
+      "cn": "76012030",
+      "name": "未锻轧铝合金锭坯",
+      "en": "Unwrought aluminium alloys in the form of slabs",
+      "values": [
+        3.3,
+        3.6,
+        3.9
+      ],
+      "sourceRow": 6,
+      "sourceDirect": 3
+    },
+    {
+      "cn": "76012040",
+      "name": "未锻轧铝合金棒坯",
+      "en": "Unwrought aluminium alloys in the form of billets",
+      "values": [
+        3.3,
+        3.6,
+        3.9
+      ],
+      "sourceRow": 7,
+      "sourceDirect": 3
+    },
+    {
+      "cn": "76012080",
+      "name": "未锻轧铝合金（锭坯、棒坯除外）",
+      "en": "Unwrought aluminium alloys (excl. slabs and billets)",
+      "values": [
+        3.3,
+        3.6,
+        3.9
+      ],
+      "sourceRow": 8,
+      "sourceDirect": 3
+    },
+    {
+      "cn": "76031000",
+      "name": "非片状结构铝粉（铝丸除外）",
+      "en": "Powders of aluminium, of non-lamellar structure (excl. pellets of aluminium)",
+      "values": [
+        4.563,
+        4.978,
+        5.392
+      ],
+      "sourceRow": 9,
+      "sourceDirect": 4148
+    },
+    {
+      "cn": "76032000",
+      "name": "片状结构铝粉及铝片（铝丸、铝亮片除外）",
+      "en": "Powders of aluminium, of lamellar structure, and flakes of aluminium (excl. pellets of aluminium, and spangles)",
+      "values": [
+        4.563,
+        4.978,
+        5.392
+      ],
+      "sourceRow": 10,
+      "sourceDirect": 4148
+    },
+    {
+      "cn": "76041010",
+      "name": "棒材",
+      "en": "Bars, rods and profiles, of non-alloy aluminium",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 11,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76041090",
+      "name": "型材",
+      "en": "Profiles of non-alloy aluminium, n.e.s.",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 12,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76042100",
+      "name": "空心型材",
+      "en": "Hollow profiles of aluminium alloys, n.e.s.",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 13,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76042910",
+      "name": "棒材",
+      "en": "Bars and rods of aluminium alloys",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 14,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76042990",
+      "name": "型材",
+      "en": "Solid profiles, of aluminium alloys, n.e.s.",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 15,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76051100",
+      "name": "非合金铝线材，最大横截面尺寸＞7 毫米（不包括品目 7614 的绞线、电缆、编织带及其他制品，绝缘电线）",
+      "en": "Wire of non-alloy aluminium, with a maximum cross-sectional dimension of > 7 mm (excl. stranded wire, cables, plaited bands and the like and other articles of heading 7614, and electrically insulated wires)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 16,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76051900",
+      "name": "非合金铝线材，最大横截面尺寸≤7 毫米（不包括品目 7614 的绞线、电缆、绳索及其他制品，绝缘电线，乐器弦）",
+      "en": "Wire of non-alloy aluminium, with a maximum cross-sectional dimension of <= 7 mm (other than stranded wires, cables, ropes and other articles of heading 7614, electrically insulated wires, strings for musical instruments)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 17,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76052100",
+      "name": "铝合金线材，最大横截面尺寸＞7 毫米（不包括品目 7614 的绞线、电缆、编织带及其他制品，绝缘电线）",
+      "en": "Wire of aluminium alloys, with a maximum cross-sectional dimension of > 7 mm (excl. stranded wire, cables, plaited bands and the like and other articles of heading 7614, and electrically insulated wires)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 18,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76052900",
+      "name": "铝合金线材，最大横截面尺寸≤7 毫米（不包括品目 7614 的绞线、电缆、绳索及其他制品，绝缘电线，乐器弦）",
+      "en": "Wire, of aluminium alloys, having a maximum cross-sectional dimension of <= 7 mm (other than stranded wires, cables, ropes and other articles of heading 7614, electrically insulated wires, strings for musical instruments)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 19,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76061130",
+      "name": "厚度超过 0.2 毫米的铝板、片及带材",
+      "en": "Aluminium Composite Panel, of non-alloy aluminium, of a thickness of > 0,2 mm",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 20,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061150",
+      "name": "非合金铝制铝塑复合板，厚度＞0.2 毫米",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm, square or rectangular, painted, varnished or coated with plastics (excl. Aluminium Composite Panel)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 21,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061191",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米，正方形或矩形，涂漆、涂清漆或覆塑料（铝塑复合板除外）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm but < 3 mm, square or rectangular (excl. such products painted, varnished or coated with plastics, and expanded plates, sheets and strip)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 22,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061193",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米且＜3 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品，以及穿孔板、片和带材）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of >= 3 mm but < 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 23,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061199",
+      "name": "非合金铝板、片和带材，厚度≥3 毫米且＜6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of >= 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 24,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061211",
+      "name": "非合金铝板、片和带材，厚度≥6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Beverage can body stock, of aluminium alloys, of a thickness of > 0,2 mm",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 25,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061219",
+      "name": "铝合金制饮料罐罐体用铝带，厚度＞0.2 毫米",
+      "en": "Beverage can end stock and tab stock, of aluminium alloys, of a thickness of > 0,2 mm",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 26,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061230",
+      "name": "铝合金制饮料罐罐盖和拉环用铝带，厚度＞0.2 毫米",
+      "en": "Aluminium Composite Panel, of aluminium alloys, of a thickness of > 0,2 mm",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 27,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061250",
+      "name": "铝合金制铝塑复合板，厚度＞0.2 毫米",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm, square or rectangular, painted, varnished or coated with plastics (excl. beverage can body stock, end stock and tab stock, and Aluminium Composite Panel)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 28,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061292",
+      "name": "铝合金板、片和带材，厚度＞0.2 毫米，正方形或矩形，涂漆、涂清漆或覆塑料（不包括饮料罐罐体、罐盖和拉环用铝带，以及铝塑复合板）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm but < 3 mm, square or rectangular (excl. painted, varnished or coated with plastics, expanded plates, sheets and strip, beverage can body stock, end stock and tab stock)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 29,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061293",
+      "name": "铝合金板、片和带材，厚度＞0.2 毫米且＜3 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品，穿孔板、片和带材，以及饮料罐罐体、罐盖和拉环用铝带）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of >= 3 mm but < 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 30,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76061299",
+      "name": "铝合金板、片和带材，厚度≥3 毫米且＜6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of >= 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 31,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76069100",
+      "name": "铝合金板、片和带材，厚度≥6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm (other than square or rectangular)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 32,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76069200",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米（非正方形或矩形）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm (other than square or rectangular)",
+      "values": [
+        4.532,
+        4.944,
+        5.356
+      ],
+      "sourceRow": 33,
+      "sourceDirect": 4120
+    },
+    {
+      "cn": "76071111",
+      "name": "未覆背的铝箔，经轧制但未进一步加工，厚度小于 0.021 毫米，卷重不超过 10 千克（不包括品目 3212 的压印箔及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of < 0,021 mm, in rolls of a weight of <= 10 kg (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 34,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76071119",
+      "name": "未覆背的铝箔，经轧制但未进一步加工，厚度小于 0.021 毫米（不包括税目 3212 的冲压箔，以及制成圣诞树装饰材料的箔和重量不超过 10 公斤的卷状箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material and in rolls of a weight <= 10 kg)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 35,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76071190",
+      "name": "无衬背铝箔，轧制但未进一步加工，厚度＜0.021 毫米（不包括品目 3212 的烫印箔、制成圣诞树装饰材料的箔以及成卷重量≤10 千克的箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of >= 0,021 mm but <= 2 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 36,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76071910",
+      "name": "无衬背铝箔，轧制但未进一步加工，厚度≥0.021 毫米且≤2 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled and further worked, of a thickness of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 37,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76071990",
+      "name": "无衬背铝箔，轧制并进一步加工，厚度＜0.021 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled and further worked, of a thickness (excl. any backing) from 0,021 mm to 0,2 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 38,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76072010",
+      "name": "无衬背铝箔，轧制并进一步加工，厚度（不含任何衬背）0.021 毫米至 0.2 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, backed, of a thickness (excl. any backing) of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 39,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76072091",
+      "name": "有衬背铝箔，厚度（不含任何衬背）＜0.021 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium Composite Panel, of a thickness <= 0,2 mm",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 40,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76072099",
+      "name": "铝塑复合板，厚度≤0.2 毫米",
+      "en": "Aluminium foil, backed, of a thickness (excl. any backing) of >= 0,021 mm but <= 0,2 mm (excl. stamping foils of heading 3212, foil made up as christmas tree decorating material, and Aluminium Composite Panel)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 41,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76081000",
+      "name": "有衬背铝箔，厚度（不含任何衬背）≥0.021 毫米且≤0.2 毫米（不包括品目 3212 的烫印箔、制成圣诞树装饰材料的箔以及铝塑复合板）",
+      "en": "Tubes and pipes of non-alloy aluminium (excl. hollow profiles)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 42,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76082020",
+      "name": "非合金铝管子（空心型材除外）",
+      "en": "Tubes and pipes of aluminium alloys, welded (excl. hollow profiles)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 43,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76082081",
+      "name": "铝合金焊接管子（空心型材除外）",
+      "en": "Tubes and pipes of aluminium alloys, not further worked than extruded (excl. hollow profiles)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 44,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76082089",
+      "name": "仅经挤压加工的铝合金管子（空心型材除外）",
+      "en": "Tubes and pipes of aluminium alloys (excl. such products welded or not further worked than extruded, and hollow profiles)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 45,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76090000",
+      "name": "其他铝合金管子（不包括焊接的、仅经挤压加工的管子以及空心型材）",
+      "en": "Aluminium tube or pipe fittings \"e.g., couplings, elbows, sleeves\"",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 46,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76101000",
+      "name": "门、窗及其框架和门槛",
+      "en": "Doors, windows and their frames and thresholds for door, of aluminium (excl. door furniture)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 47,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76101000",
+      "name": "铝制门、窗及其框架和门槛（门用五金件除外）",
+      "en": "Bridges and bridge-sections, towers and lattice masts, of aluminium",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 48,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76109010",
+      "name": "铝制桥梁及桥梁构件、塔架和格构式桅杆",
+      "en": "Structures and parts of structures, of aluminium, n.e.s., and plates, rods, profiles, tubes and the like, prepared for use in structures, of aluminium, n.e.s. (excl. prefabricated buildings of heading 9406, doors and windows and their frames and thresholds for doors, bridges and bridge-sections, towers and lattice masts)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 49,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76109090",
+      "name": "其他未列名铝制结构件及结构件零件，以及预制用于结构的铝板、杆、型材、管子等（不包括品目 9406 的预制建筑物，门、窗及其框架和门槛，桥梁及桥梁构件，塔架和格构式桅杆）",
+      "en": "Reservoirs, tanks, vats and similar containers, of aluminium, for any material (other than compressed or liquefied gas), of a capacity of > 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated (excl. containers specifically constructed or equipped for one or more types of transport)",
+      "values": [
+        5.385,
+        5.875,
+        6.364
+      ],
+      "sourceRow": 50,
+      "sourceDirect": 4896
+    },
+    {
+      "cn": "76110000",
+      "name": "用于盛装任何物料（压缩或液化气体除外）的铝制贮罐、槽、桶及类似容器，容量超过 300 升，无论是否衬里或隔热，但未装有机械或热力设备",
+      "en": "Collapsible tubular containers, of aluminium",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 51,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76121000",
+      "name": "铝制软管容器",
+      "en": "Containers of a kind used for aerosols, of aluminium",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 52,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76129020",
+      "name": "铝制气溶胶容器",
+      "en": "Casks, drums, cans, boxes and similar containers, of aluminium, manufactured from foil of a thickness <= 0,2 mm",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 53,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76129030",
+      "name": "用厚度≤0.2 毫米铝箔制成的铝制木桶、圆桶、罐、盒及类似容器",
+      "en": "Casks, drums, cans, boxes and similar containers <= 300 l, of aluminium, for any material (other than compressed or liquefied gas), n.e.s. (other than collapsible tubular containers, containers for aerosols and containers manufactured from foil of a thickness <= 0,2 mm)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 54,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76129080",
+      "name": "容量≤300 升的其他未列名铝制木桶、圆桶、罐、盒及类似容器，用于盛装任何物料（压缩或液化气体除外）（不包括软管容器、气溶胶容器以及用厚度≤0.2 毫米铝箔制成的容器）",
+      "en": "Aluminium containers for compressed or liquefied gas",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 55,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76130000",
+      "name": "压缩或液化气体用铝制容器",
+      "en": "Stranded wire, cables, plaited bands and the like, of aluminium, with steel core (excl. such products electrically insulated)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 56,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76141000",
+      "name": "带钢芯的铝制绞线、电缆、编织带及类似制品（绝缘制品除外）",
+      "en": "Stranded wires, cables, ropes and similar articles, of aluminium (other than with steel core and electrically insulated products)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 57,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76149000",
+      "name": "其他铝制绞线、电缆、绳索及类似制品（带钢芯的和绝缘制品除外）",
+      "en": "Nails, tacks, staples, screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles, of aluminium (excl. staples in strips, plugs, bungs and the like, threaded)",
+      "values": [
+        5.369,
+        5.857,
+        6.345
+      ],
+      "sourceRow": 58,
+      "sourceDirect": 4881
+    },
+    {
+      "cn": "76161000",
+      "name": "钉子、平头钉、U 形钉（品目 8305 的除外）、螺钉、螺栓、螺母、钩头螺钉、铆钉、销、开口销、垫圈及类似品",
+      "en": "Cloth, grill, netting and fencing, of aluminium wire (excl. cloth of metal fibres for clothing, lining and similar uses, and cloth, grill and netting made into hand sieves or machine parts)",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 59,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76169100",
+      "name": "铝丝制布、格栅、网及围栏",
+      "en": "Articles of aluminium, cast, n.e.s.",
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 60,
+      "sourceDirect": 5559
+    },
+    {
+      "cn": "76169910",
+      "name": "铸件",
+      "en": "Articles of aluminium, uncast, n.e.s.",
+      "values": [
+        4.996,
+        5.45,
+        5.904
+      ],
+      "sourceRow": 61,
+      "sourceDirect": 4542
+    },
+    {
+      "cn": "76169990",
+      "name": "其他",
+      "en": null,
+      "values": [
+        6.115,
+        6.671,
+        7.227
+      ],
+      "sourceRow": 62,
+      "sourceDirect": 5559
+    }
+  ],
+  "benchmarks": [
+    {
+      "cn": "76011010",
+      "name": "未锻轧非合金铝锭坯",
+      "en": "Aluminium slabs, not alloyed, unwrought",
+      "actualK": 1.423,
+      "actualL": 0.091,
+      "K": 1.423,
+      "L": 0.091,
+      "sourceRow": 4,
+      "actualShared": false
+    },
+    {
+      "cn": "76011090",
+      "name": "未锻轧非合金铝（锭坯除外）",
+      "en": "Aluminium, not alloyed, unwrought (excl. slabs)",
+      "actualK": 1.423,
+      "actualL": 0.091,
+      "K": 1.423,
+      "L": 0.091,
+      "sourceRow": 5,
+      "actualShared": false
+    },
+    {
+      "cn": "76012030",
+      "name": "未锻轧铝合金锭坯",
+      "en": "Unwrought aluminium alloys in the form of slabs",
+      "actualK": 1.423,
+      "actualL": 0.091,
+      "K": 1.423,
+      "L": 0.091,
+      "sourceRow": 6,
+      "actualShared": false
+    },
+    {
+      "cn": "76012040",
+      "name": "未锻轧铝合金棒坯",
+      "en": "Unwrought aluminium alloys in the form of billets",
+      "actualK": 1.423,
+      "actualL": 0.091,
+      "K": 1.423,
+      "L": 0.091,
+      "sourceRow": 7,
+      "actualShared": false
+    },
+    {
+      "cn": "76012080",
+      "name": "未锻轧铝合金（锭坯、棒坯除外）",
+      "en": "Unwrought aluminium alloys (excl. slabs and billets)",
+      "actualK": 1.423,
+      "actualL": 0.091,
+      "K": 1.423,
+      "L": 0.091,
+      "sourceRow": 8,
+      "actualShared": false
+    },
+    {
+      "cn": "76031000",
+      "name": "非片状结构铝粉（铝丸除外）",
+      "en": "Powders of aluminium, of non-lamellar structure (excl. pellets of aluminium)",
+      "actualK": 0.046,
+      "actualL": 0.046,
+      "K": 1.506,
+      "L": 0.14,
+      "sourceRow": 9,
+      "actualShared": true
+    },
+    {
+      "cn": "76032000",
+      "name": "片状结构铝粉及铝片（铝丸、铝亮片除外）",
+      "en": "Powders of aluminium, of lamellar structure, and flakes of aluminium (excl. pellets of aluminium, and spangles)",
+      "actualK": 0.046,
+      "actualL": 0.046,
+      "K": 1.506,
+      "L": 0.14,
+      "sourceRow": 10,
+      "actualShared": true
+    },
+    {
+      "cn": "76041010",
+      "name": "非合金铝棒材、杆材和型材",
+      "en": "Bars, rods and profiles, of non-alloy aluminium",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 11,
+      "actualShared": true
+    },
+    {
+      "cn": "76041090",
+      "name": "其他未列名非合金铝型材",
+      "en": "Profiles of non-alloy aluminium, n.e.s.",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 12,
+      "actualShared": true
+    },
+    {
+      "cn": "76042100",
+      "name": "其他未列名铝合金空心型材",
+      "en": "Hollow profiles of aluminium alloys, n.e.s.",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 13,
+      "actualShared": true
+    },
+    {
+      "cn": "76042910",
+      "name": "铝合金棒材和杆材",
+      "en": "Bars and rods of aluminium alloys",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 14,
+      "actualShared": true
+    },
+    {
+      "cn": "76042990",
+      "name": "其他未列名铝合金实心型材",
+      "en": "Solid profiles, of aluminium alloys, n.e.s.",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 15,
+      "actualShared": true
+    },
+    {
+      "cn": "76051100",
+      "name": "非合金铝线材，最大横截面尺寸＞7 毫米（不包括品目 7614 的绞线、电缆、编织带及其他制品，绝缘电线）",
+      "en": "Wire of non-alloy aluminium, with a maximum cross-sectional dimension of > 7 mm (excl. stranded wire, cables, plaited bands and the like and other articles of heading 7614, and electrically insulated wires)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 16,
+      "actualShared": true
+    },
+    {
+      "cn": "76051900",
+      "name": "非合金铝线材，最大横截面尺寸≤7 毫米（不包括品目 7614 的绞线、电缆、绳索及其他制品，绝缘电线，乐器弦）",
+      "en": "Wire of non-alloy aluminium, with a maximum cross-sectional dimension of <= 7 mm (other than stranded wires, cables, ropes and other articles of heading 7614, electrically insulated wires, strings for musical instruments)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 17,
+      "actualShared": true
+    },
+    {
+      "cn": "76052100",
+      "name": "铝合金线材，最大横截面尺寸＞7 毫米（不包括品目 7614 的绞线、电缆、编织带及其他制品，绝缘电线）",
+      "en": "Wire of aluminium alloys, with a maximum cross-sectional dimension of > 7 mm (excl. stranded wire, cables, plaited bands and the like and other articles of heading 7614, and electrically insulated wires)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 18,
+      "actualShared": true
+    },
+    {
+      "cn": "76052900",
+      "name": "铝合金线材，最大横截面尺寸≤7 毫米（不包括品目 7614 的绞线、电缆、绳索及其他制品，绝缘电线，乐器弦）",
+      "en": "Wire, of aluminium alloys, having a maximum cross-sectional dimension of <= 7 mm (other than stranded wires, cables, ropes and other articles of heading 7614, electrically insulated wires, strings for musical instruments)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 19,
+      "actualShared": true
+    },
+    {
+      "cn": "76061130",
+      "name": "非合金铝制铝塑复合板，厚度＞0.2 毫米",
+      "en": "Aluminium Composite Panel, of non-alloy aluminium, of a thickness of > 0,2 mm",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 20,
+      "actualShared": true
+    },
+    {
+      "cn": "76061150",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米，正方形或矩形，涂漆、涂清漆或覆塑料（铝塑复合板除外）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm, square or rectangular, painted, varnished or coated with plastics (excl. Aluminium Composite Panel)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 21,
+      "actualShared": true
+    },
+    {
+      "cn": "76061191",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米且＜3 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品，以及穿孔板、片和带材）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm but < 3 mm, square or rectangular (excl. such products painted, varnished or coated with plastics, and expanded plates, sheets and strip)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 22,
+      "actualShared": true
+    },
+    {
+      "cn": "76061193",
+      "name": "非合金铝板、片和带材，厚度≥3 毫米且＜6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of >= 3 mm but < 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 23,
+      "actualShared": true
+    },
+    {
+      "cn": "76061199",
+      "name": "非合金铝板、片和带材，厚度≥6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of >= 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 24,
+      "actualShared": true
+    },
+    {
+      "cn": "76061211",
+      "name": "铝合金制饮料罐罐体用铝带，厚度＞0.2 毫米",
+      "en": "Beverage can body stock, of aluminium alloys, of a thickness of > 0,2 mm",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 25,
+      "actualShared": true
+    },
+    {
+      "cn": "76061219",
+      "name": "铝合金制饮料罐罐盖和拉环用铝带，厚度＞0.2 毫米",
+      "en": "Beverage can end stock and tab stock, of aluminium alloys, of a thickness of > 0,2 mm",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 26,
+      "actualShared": true
+    },
+    {
+      "cn": "76061230",
+      "name": "铝合金制铝塑复合板，厚度＞0.2 毫米",
+      "en": "Aluminium Composite Panel, of aluminium alloys, of a thickness of > 0,2 mm",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 27,
+      "actualShared": true
+    },
+    {
+      "cn": "76061250",
+      "name": "铝合金板、片和带材，厚度＞0.2 毫米，正方形或矩形，涂漆、涂清漆或覆塑料（不包括饮料罐罐体、罐盖和拉环用铝带，以及铝塑复合板）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm, square or rectangular, painted, varnished or coated with plastics (excl. beverage can body stock, end stock and tab stock, and Aluminium Composite Panel)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 28,
+      "actualShared": true
+    },
+    {
+      "cn": "76061292",
+      "name": "铝合金板、片和带材，厚度＞0.2 毫米且＜3 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品，穿孔板、片和带材，以及饮料罐罐体、罐盖和拉环用铝带）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm but < 3 mm, square or rectangular (excl. painted, varnished or coated with plastics, expanded plates, sheets and strip, beverage can body stock, end stock and tab stock)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 29,
+      "actualShared": true
+    },
+    {
+      "cn": "76061293",
+      "name": "铝合金板、片和带材，厚度≥3 毫米且＜6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of >= 3 mm but < 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 30,
+      "actualShared": true
+    },
+    {
+      "cn": "76061299",
+      "name": "铝合金板、片和带材，厚度≥6 毫米，正方形或矩形（不包括涂漆、涂清漆或覆塑料的产品）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of >= 6 mm, square or rectangular (excl. such products painted, varnished or coated with plastics)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 31,
+      "actualShared": true
+    },
+    {
+      "cn": "76069100",
+      "name": "非合金铝板、片和带材，厚度＞0.2 毫米（非正方形或矩形）",
+      "en": "Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm (other than square or rectangular)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 32,
+      "actualShared": true
+    },
+    {
+      "cn": "76069200",
+      "name": "铝合金板、片和带材，厚度＞0.2 毫米（非正方形或矩形）",
+      "en": "Plates, sheets and strip, of aluminium alloys, of a thickness of > 0,2 mm (other than square or rectangular)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 33,
+      "actualShared": true
+    },
+    {
+      "cn": "76071111",
+      "name": "无衬背铝箔，轧制但未进一步加工，厚度＜0.021 毫米，成卷重量≤10 千克（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of < 0,021 mm, in rolls of a weight of <= 10 kg (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 34,
+      "actualShared": true
+    },
+    {
+      "cn": "76071119",
+      "name": "无衬背铝箔，轧制但未进一步加工，厚度＜0.021 毫米（不包括品目 3212 的烫印箔、制成圣诞树装饰材料的箔以及成卷重量≤10 千克的箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material and in rolls of a weight <= 10 kg)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 35,
+      "actualShared": true
+    },
+    {
+      "cn": "76071190",
+      "name": "无衬背铝箔，轧制但未进一步加工，厚度≥0.021 毫米且≤2 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled but not further worked, of a thickness of >= 0,021 mm but <= 2 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 36,
+      "actualShared": true
+    },
+    {
+      "cn": "76071910",
+      "name": "无衬背铝箔，轧制并进一步加工，厚度＜0.021 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled and further worked, of a thickness of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 37,
+      "actualShared": true
+    },
+    {
+      "cn": "76071990",
+      "name": "无衬背铝箔，轧制并进一步加工，厚度（不含任何衬背）0.021 毫米至 0.2 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, not backed, rolled and further worked, of a thickness (excl. any backing) from 0,021 mm to 0,2 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 38,
+      "actualShared": true
+    },
+    {
+      "cn": "76072010",
+      "name": "有衬背铝箔，厚度（不含任何衬背）＜0.021 毫米（不包括品目 3212 的烫印箔，以及制成圣诞树装饰材料的箔）",
+      "en": "Aluminium foil, backed, of a thickness (excl. any backing) of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 39,
+      "actualShared": true
+    },
+    {
+      "cn": "76072091",
+      "name": "铝塑复合板，厚度≤0.2 毫米",
+      "en": "Aluminium Composite Panel, of a thickness <= 0,2 mm",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 40,
+      "actualShared": true
+    },
+    {
+      "cn": "76072099",
+      "name": "有衬背铝箔，厚度（不含任何衬背）≥0.021 毫米且≤0.2 毫米（不包括品目 3212 的烫印箔、制成圣诞树装饰材料的箔以及铝塑复合板）",
+      "en": "Aluminium foil, backed, of a thickness (excl. any backing) of >= 0,021 mm but <= 0,2 mm (excl. stamping foils of heading 3212, foil made up as christmas tree decorating material, and Aluminium Composite Panel)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.599,
+      "L": 0.258,
+      "sourceRow": 41,
+      "actualShared": true
+    },
+    {
+      "cn": "76081000",
+      "name": "非合金铝管子（空心型材除外）",
+      "en": "Tubes and pipes of non-alloy aluminium (excl. hollow profiles)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 42,
+      "actualShared": true
+    },
+    {
+      "cn": "76082020",
+      "name": "铝合金焊接管子（空心型材除外）",
+      "en": "Tubes and pipes of aluminium alloys, welded (excl. hollow profiles)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 43,
+      "actualShared": true
+    },
+    {
+      "cn": "76082081",
+      "name": "仅经挤压加工的铝合金管子（空心型材除外）",
+      "en": "Tubes and pipes of aluminium alloys, not further worked than extruded (excl. hollow profiles)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 44,
+      "actualShared": true
+    },
+    {
+      "cn": "76082089",
+      "name": "其他铝合金管子（不包括焊接的、仅经挤压加工的管子以及空心型材）",
+      "en": "Tubes and pipes of aluminium alloys (excl. such products welded or not further worked than extruded, and hollow profiles)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 45,
+      "actualShared": true
+    },
+    {
+      "cn": "76090000",
+      "name": "铝制管子附件（如接头、弯头、套管）",
+      "en": "Aluminium tube or pipe fittings \"e.g., couplings, elbows, sleeves\"",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 46,
+      "actualShared": true
+    },
+    {
+      "cn": "76101000",
+      "name": "铝制门、窗及其框架和门槛（门用五金件除外）",
+      "en": "Doors, windows and their frames and thresholds for door, of aluminium (excl. door furniture)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 47,
+      "actualShared": true
+    },
+    {
+      "cn": "76109010",
+      "name": "铝制桥梁及桥梁构件、塔架和格构式桅杆",
+      "en": "Bridges and bridge-sections, towers and lattice masts, of aluminium",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 48,
+      "actualShared": true
+    },
+    {
+      "cn": "76109090",
+      "name": "其他未列名铝制结构件及结构件零件，以及预制用于结构的铝板、杆、型材、管子等（不包括品目 9406 的预制建筑物，门、窗及其框架和门槛，桥梁及桥梁构件，塔架和格构式桅杆）",
+      "en": "Structures and parts of structures, of aluminium, n.e.s., and plates, rods, profiles, tubes and the like, prepared for use in structures, of aluminium, n.e.s. (excl. prefabricated buildings of heading 9406, doors and windows and their frames and thresholds for doors, bridges and bridge-sections, towers and lattice masts)",
+      "actualK": 0.06,
+      "actualL": 0.06,
+      "K": 1.493,
+      "L": 0.152,
+      "sourceRow": 49,
+      "actualShared": true
+    },
+    {
+      "cn": "76110000",
+      "name": "铝制贮罐、槽罐、大桶及类似容器，用于盛装任何物料（压缩或液化气体除外），容量＞300 升，未装有机械或热力设备，不论是否衬里或隔热（不包括专为一种或多种运输方式设计或配备的容器）",
+      "en": "Reservoirs, tanks, vats and similar containers, of aluminium, for any material (other than compressed or liquefied gas), of a capacity of > 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated (excl. containers specifically constructed or equipped for one or more types of transport)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 50,
+      "actualShared": true
+    },
+    {
+      "cn": "76121000",
+      "name": "铝制软管容器",
+      "en": "Collapsible tubular containers, of aluminium",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 51,
+      "actualShared": true
+    },
+    {
+      "cn": "76129020",
+      "name": "铝制气溶胶容器",
+      "en": "Containers of a kind used for aerosols, of aluminium",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 52,
+      "actualShared": true
+    },
+    {
+      "cn": "76129030",
+      "name": "用厚度≤0.2 毫米铝箔制成的铝制木桶、圆桶、罐、盒及类似容器",
+      "en": "Casks, drums, cans, boxes and similar containers, of aluminium, manufactured from foil of a thickness <= 0,2 mm",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 53,
+      "actualShared": true
+    },
+    {
+      "cn": "76129080",
+      "name": "容量≤300 升的其他未列名铝制木桶、圆桶、罐、盒及类似容器，用于盛装任何物料（压缩或液化气体除外）（不包括软管容器、气溶胶容器以及用厚度≤0.2 毫米铝箔制成的容器）",
+      "en": "Casks, drums, cans, boxes and similar containers <= 300 l, of aluminium, for any material (other than compressed or liquefied gas), n.e.s. (other than collapsible tubular containers, containers for aerosols and containers manufactured from foil of a thickness <= 0,2 mm)",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 54,
+      "actualShared": true
+    },
+    {
+      "cn": "76130000",
+      "name": "铝制压缩或液化气体容器",
+      "en": "Aluminium containers for compressed or liquefied gas",
+      "actualK": 0.166,
+      "actualL": 0.166,
+      "K": 1.594,
+      "L": 0.258,
+      "sourceRow": 55,
+      "actualShared": true
+    },
+    {
+      "cn": "76141000",
+      "name": "带钢芯的铝制绞线、电缆、编织带及类似制品（绝缘制品除外）",
+      "en": "Stranded wire, cables, plaited bands and the like, of aluminium, with steel core (excl. such products electrically insulated)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 56,
+      "actualShared": true
+    },
+    {
+      "cn": "76149000",
+      "name": "其他铝制绞线、电缆、绳索及类似制品（带钢芯的和绝缘制品除外）",
+      "en": "Stranded wires, cables, ropes and similar articles, of aluminium (other than with steel core and electrically insulated products)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 57,
+      "actualShared": true
+    },
+    {
+      "cn": "76161000",
+      "name": "铝制钉、平头钉、U 形钉、螺钉、螺栓、螺母、螺丝钩、铆钉、销钉、开口销、垫圈及类似制品（成条 U 形钉、塞子、堵头及类似螺纹制品除外）",
+      "en": "Nails, tacks, staples, screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles, of aluminium (excl. staples in strips, plugs, bungs and the like, threaded)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 58,
+      "actualShared": true
+    },
+    {
+      "cn": "76169100",
+      "name": "铝线制布、格栅、网和围栏（不包括用于服装、衬里及类似用途的金属纤维布，以及制成手工筛或机器零件的布、格栅和网）",
+      "en": "Cloth, grill, netting and fencing, of aluminium wire (excl. cloth of metal fibres for clothing, lining and similar uses, and cloth, grill and netting made into hand sieves or machine parts)",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 59,
+      "actualShared": true
+    },
+    {
+      "cn": "76169910",
+      "name": "其他未列名铝制铸造制品",
+      "en": "Articles of aluminium, cast, n.e.s.",
+      "actualK": 0.046,
+      "actualL": 0.046,
+      "K": 1.506,
+      "L": 0.14,
+      "sourceRow": 60,
+      "actualShared": true
+    },
+    {
+      "cn": "76169990",
+      "name": "其他未列名非铸造铝制品",
+      "en": "Articles of aluminium, uncast, n.e.s.",
+      "actualK": 0.056,
+      "actualL": 0.056,
+      "K": 1.485,
+      "L": 0.148,
+      "sourceRow": 61,
+      "actualShared": true
+    }
+  ],
+  "notes": [
+    "默认值表59条记录，76101000重复一次，共58个唯一CN；基准表58个唯一CN。",
+    "使用G/H/I年度含加价列，2028年以后使用I列；不重复加价。",
+    "D/F原始直接排放列部分数值为4148/4881等，保留作溯源，不用于年度默认值计算。",
+    "A列D:E合并单元格表示原铝与再生铝共用本工序基准；B列F/G分别为原铝/再生铝默认值基准。"
+  ]
+}

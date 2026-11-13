@@ -14,7 +14,7 @@ def q(value):
     return F(str(value))
 
 
-def rounded(value, places=0):
+def rounded(value, places=5):
     scaled = value * 10**places
     whole, remainder = divmod(scaled.numerator, scaled.denominator)
     return F(whole + (2 * remainder >= scaled.denominator), 10**places)
@@ -31,23 +31,23 @@ def reference(data):
         if not ready:
             raise ValueError('Cycle or missing upstream')
         for p in ready:
-            fuel = sum((rounded(q(f['quantity']) * q(f['ncv']) * q(f['ef']) * q(f['oxidation']) / 100000, 1) for f in p['fuels']), F(0))
+            fuel = sum((rounded(q(f['quantity']) * q(f['ncv']) * rounded(q(f['ef']),3) * q(f['oxidation']) / 100000, 5) for f in p['fuels']), F(0))
             anode = cf4 = c2f6 = pfc = F(0)
             if p['kind'] == 'primary':
                 a, f = p['anode'], p['pfc']
-                anode = rounded(q(a['quantity']) * q(a['ef']) * (1 - q(a['lossRate']) / 100), 4)
-                cf4 = rounded(q(f['production']) * q(f['frequency']) * q(f['duration']) * q(f['sef']) / 1000, 2)
-                c2f6 = rounded(cf4 * q(f['ratio']), 2)
+                anode = rounded(q(a['quantity']) * rounded(q(a['ef']),3) * (1 - q(a['lossRate']) / 100), 5)
+                cf4 = rounded(q(f['production']) * q(f['frequency']) * q(f['duration']) * rounded(q(f['sef']),3) / 1000, 5)
+                c2f6 = rounded(cf4 * rounded(q(f['ratio']),3), 5)
                 pfc = rounded((cf4 * 6630 + c2f6 * 11100) * 100 / q(f['collection']))
             direct = rounded(fuel + anode + pfc)
-            upstream = sum((done[m['productId']]['embeddedProduction'] * q(m['quantity']) / q(done[m['productId']]['production']) for m in p['precursors']), F(0))
+            upstream = sum((rounded(done[m['productId']]['embeddedProduction'] * q(m['quantity']) / q(done[m['productId']]['production']),5) for m in p['precursors']), F(0))
             embedded = direct + upstream
-            see = rounded(embedded / q(p['production']), 3)
-            free = q(p['benchmark']) * factor
-            net = max(F(0), (see - free) * q(p['exportQty']))
+            see = rounded(embedded / q(p['production']), 5)
+            free = rounded(q(p['benchmark']),3) * factor
+            net = rounded(max(F(0), (see - free) * q(p['exportQty'])),5)
             cost = rounded(net * price, 2) if price is not None else None
             done[p['id']] = dict(production=q(p['production']), combustion=fuel, anode=anode, cf4=cf4, c2f6=c2f6, pfc=pfc,
-                direct=direct, se=rounded(direct/q(p['production']), 3), precursor=rounded(upstream, 6), embeddedProduction=embedded,
+                direct=direct, se=rounded(direct/q(p['production']), 5), precursor=rounded(upstream, 5), embeddedProduction=embedded,
                 see=see, sefa=free, netEmissions=net, certificates=-(-net.numerator//net.denominator),
                 total=rounded(see*q(p['exportQty'])), cost=cost, costWan=rounded(cost/10000, 2) if cost is not None else None)
             pending.remove(p)
@@ -115,6 +115,13 @@ p=deepcopy(p);p['pfc']['ratio']='.1209999999'
 add('C2F6-below-half',[p])
 add('fractional-output-export',[product('decimal-quantity',production='1234.567',exports='12.345',fuels=[fuel('567.89')])])
 
+p=primary('smelting',200000,80000)
+p['fuels']=[fuel(12219)];p['anode'].update(quantity=69000,lossRate=0)
+p['pfc'].update(frequency=.6039,duration=.25,collection=98)
+add('document-example-five-decimals',[p,product('forming',production=113000,exports=113000,fuels=[fuel(1962)],links=[dict(productId='smelting',quantity=120000)])],price=75.36)
+add('five-decimal-half-up',[product('round5',fuels=[fuel(1,1,.005)],production=1,exports=1)])
+add('factor-third-decimal',[product('factor3',fuels=[fuel(100,48,'56.1005')])])
+
 rng=random.Random(20261111)
 for index in range(250):
     production=rng.randint(10000,200000)
@@ -129,6 +136,6 @@ for index in range(250):
         product('B',production=inp2*94//100,exports=inp2*88//100,fuels=[fuel(rng.randint(0,2000))],links=[dict(productId='upstream',quantity=inp2)])]
     add(f'seeded-{index:03}',[source,*downstreams],year=rng.choice([2026,2027,2028,2029,2030]),price=rng.randint(5000,10000)/100)
 
-print('{"description":"Independent Python Fraction half-up oracle; synthetic inputs; seed 20261111","cases":[')
+print('{"description":"Independent Python Fraction oracle; 5-decimal emissions, 3-decimal factors; seed 20261111","cases":[')
 print(',\n'.join(json.dumps(case,ensure_ascii=True,separators=(',',':')) for case in cases))
 print(']}')

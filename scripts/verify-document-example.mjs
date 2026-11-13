@@ -10,11 +10,11 @@ try{
  const {reportBlob,localApi}=await vite.ssrLoadModule('/browser/client.ts');
  const memory=new Map();globalThis.localStorage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)};
  const input=documentExampleInput(),r=calculate(input,config),[a,b]=r.products;
- assert.deepEqual([a.combustion,a.anode,a.cf4,a.c2f6,a.pfc,a.direct,a.see],[32903.3,252540,4.32,.52,35116,320559,1.603]);
- assert.deepEqual([b.direct,b.sources[0].allocation,b.precursor,b.se,b.see],[5283,.6,192335.4,.047,1.749]);
- assert.equal(a.cost,1299658.56);assert.equal(a.costWan,129.97);assert.equal(b.cost,14395757.04);assert.equal(b.costWan,1439.58);
+ assert.deepEqual([a.combustion,a.anode,a.cf4,a.c2f6,a.pfc,a.direct,a.see],[32903.3232,252540,4.31789,.52246,35129.50684,320572.83004,1.60286]);
+ assert.deepEqual([b.direct,b.sources[0].allocation,b.precursor,b.se,b.see],[5283.2736,.6,192343.69802,.04675,1.74891]);
+ assert.equal(a.cost,1298814.53);assert.equal(a.costWan,129.88);assert.equal(b.cost,14394990.63);assert.equal(b.costWan,1439.5);
  assert.equal(a.sefa,1.387425);assert.equal(b.sefa,.0585);assert.notEqual(b.cost,b.certificates*b.price);
- assert.equal(r.totalCost,15695415.6);assert.equal(memory.size,0);
+ assert.equal(r.totalCost,15693805.16);assert.equal(memory.size,0);
  const invalid=(mutator,pattern)=>{const v=structuredClone(input);mutator(v);assert.throws(()=>calculate(v,config),pattern);};
  invalid(v=>v.products[1].precursors[0].quantity=120001,/超过/);
  invalid(v=>v.products[0].pfc.collection=0,/收集/);
@@ -30,9 +30,9 @@ try{
  const saved=await localApi('/api/calculate',{input,consent:true});assert.ok(saved.id);
  for(const lang of ['zh','en']){
   const x=await reportBlob({input:{...input,products:[]},recordId:saved.id,format:'xlsx',lang});const rows=readXlsx(Buffer.from(await x.arrayBuffer()));
-  for(const value of [1.603,1.749,1299658.56,14395757.04,129.97,1439.58])assert.ok(rows.some(row=>Object.values(row).includes(value)),`Missing report value ${value}`);
+  for(const value of [1.60286,1.74891,1298814.53,14394990.63,129.88,1439.5])assert.ok(rows.some(row=>Object.values(row).includes(value)),`Missing report value ${value}`);
   const p=await reportBlob({input,recordId:saved.id,format:'pdf',lang});assert.ok((await p.text()).startsWith('%PDF-1.4'));
  }
- console.log('PASS: document example emissions, staged rounding, 60% allocation, both costs, graph validation, loss rate, extra fuel, price gaps, default regression and saved bilingual PDF/XLSX.');
+ console.log('PASS: document example emissions, five-decimal rounding, 60% allocation, both costs, graph validation, loss rate, extra fuel, price gaps, default regression and saved bilingual PDF/XLSX.');
  console.log(JSON.stringify(r.products.map(({name,see,cost,costWan,netEmissions,certificates})=>({name,see,cost,costWan,netEmissions,certificates})),null,2));
 }finally{await vite.close();}

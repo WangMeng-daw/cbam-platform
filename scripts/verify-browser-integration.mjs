@@ -11,7 +11,7 @@ try{
  const saved=await localApi('/api/calculate',{input,consent:true});assert.ok(saved.id);assert.equal((await localApi('/api/records')).length,1);
  for(const lang of ['zh','en']){
   const x=await reportBlob({input:{...input,production:1},recordId:saved.id,format:'xlsx',lang});
-  const rows=readXlsx(Buffer.from(await x.arrayBuffer()));assert.ok(rows.some(r=>Object.values(r).includes(1.698)),'Saved report uses original snapshot with three-decimal display');
+  const rows=readXlsx(Buffer.from(await x.arrayBuffer()));assert.ok(rows.some(r=>Object.values(r).includes(1.6981)),'Saved report uses original snapshot with five-decimal display');
   const p=await reportBlob({input,format:'pdf',lang});assert.equal(p.type,'application/pdf');assert.ok((await p.text()).startsWith('%PDF-1.4'));
  }
  await localApi('/api/records',{id:saved.id},'DELETE');assert.equal((await localApi('/api/records')).length,0);assert.equal((await localApi('/api/records?archived=1')).length,1);
