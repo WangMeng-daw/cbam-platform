@@ -27,6 +27,37 @@ try{
  const coal=structuredClone(input);coal.products[0].fuels.push({type:'fuel-19',quantity:1000,ncv:26.7,ef:98.3,oxidation:100});assert.ok(calculate(coal,config).products[0].direct>a.direct);
  const missingPrice=structuredClone(input);missingPrice.quarter=4;missingPrice.priceOverride='';assert.equal(calculate(missingPrice,config).totalCost,null);
  const def=calculate(defaultExampleInput(),config);assert.equal(def.default.cost,287992.46);
+ const mixed=structuredClone(input);
+ const forming=mixed.products[1];
+ forming.fuels.push({type:'purchased-heat',quantity:1000});
+ forming.purchasedPrecursors=[
+  {basis:'default',cn:'76011010',country:'China',quantity:5,see:999},
+  {basis:'actual',cn:'76041090',quantity:2,see:1.23456}
+ ];
+ const mixedResult=calculate(mixed,config).products[1];
+ assert.equal(mixedResult.purchasedHeat,0.30942);
+ assert.equal(mixedResult.direct,5283.58302);
+ assert.deepEqual(mixedResult.purchases.map(row=>row.emissions),[16.5,2.46912]);
+ assert.equal(mixedResult.precursor,192362.66714);
+ assert.equal(mixedResult.embeddedProduction,197646.25016);
+ const missing=structuredClone(mixed);
+ missing.products[1].purchasedPrecursors[0].country='no such origin';
+ assert.throws(()=>calculate(missing,config),/没有|未找到/);
+ missing.products[1].purchasedPrecursors[0].basis='actual';
+ missing.products[1].purchasedPrecursors[0].see='';
+ assert.throws(()=>calculate(missing,config),/SEE/);
+ const changed=structuredClone(config);
+ changed.factors.find(f=>f.id==='purchased-heat').ef=.12;
+ assert.equal(calculate(mixed,changed).products[1].purchasedHeat,.33755);
+ const mixedRecord=await localApi('/api/calculate',{input:mixed,consent:true});
+ const {unzipSync,strFromU8}=await import('fflate');
+ for(const lang of ['zh','en']){
+  const report=await reportBlob({recordId:mixedRecord.id,format:'xlsx',lang});
+  const xml=Object.values(unzipSync(new Uint8Array(await report.arrayBuffer()))).map(strFromU8).join('');
+  for(const expected of ['76011010','16.5','2.46912','0.30942','197646.25016'])assert.ok(xml.includes(expected),expected);
+  const pdf=await reportBlob({recordId:mixedRecord.id,format:'pdf',lang});
+  assert.ok((await pdf.text()).startsWith('%PDF'));
+ }
  const saved=await localApi('/api/calculate',{input,consent:true});assert.ok(saved.id);
  for(const lang of ['zh','en']){
   const x=await reportBlob({input:{...input,products:[]},recordId:saved.id,format:'xlsx',lang});const rows=readXlsx(Buffer.from(await x.arrayBuffer()));

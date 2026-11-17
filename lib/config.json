@@ -1,6 +1,6 @@
 {
-  "version": "2026.11.13-aluminium-v3-v5",
-  "updated": "2026-11-13T00:00:00.000Z",
+  "version": "2026.11.17-actual-inputs",
+  "updated": "2026-11-17T00:00:00.000Z",
   "factors": [
     {
       "id": "fuel-0",
@@ -457,6 +457,18 @@
       "source": "WBCSD CSI / 用户需求附件1 / EU2025/2547",
       "version": "2026.1",
       "effective": "2026-01-01"
+    },
+    {
+      "id": "purchased-heat",
+      "category": "heat",
+      "name": "外购热力",
+      "en": "Outsourced heat",
+      "ef": 0.11,
+      "ncv": null,
+      "unit": "kg",
+      "source": "《工业其他行业企业温室气体排放核算方法与报告指南（试行）》",
+      "version": "表1-2026-11-13",
+      "effective": "2026-11-13"
     },
     {
       "id": "fuel-38",
